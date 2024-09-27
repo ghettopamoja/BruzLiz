@@ -645,7 +645,7 @@ body {
 
 .container .liz-content{
     background-color: transparent;
-    width: 99%;
+    width: 90%;
     min-height: 100vh;
     border-radius: 10px;
     overflow: hidden;
@@ -655,7 +655,158 @@ body {
     flex-direction: column;
     margin-top: 10px;
     animation: fadeInForward 3s ease 0s 1 normal forwards;
+    overflow: hidden;
+    flex-wrap: wrap;
 }
+
+.liz-content {
+    margin: 20px auto;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.liz-content header {
+    text-align: center;
+    margin-bottom: 20px;
+    top: 0;
+    left: 0;
+}
+
+.liz-content header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.liz-content header p {
+    font-size: 1.2em;
+    color: #f0f0f0;
+}
+
+.liz-content .bio, .gallery {
+    margin-bottom: 20px;
+}
+
+.liz-content .bio h2, .gallery h2 {
+    font-size: 1.8em;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+
+.liz-content .bio p {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.liz-content .gallery  {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: transparent;
+    width: 100%;
+    min-height: 100%;
+    margin-top: 50px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+.images{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.gallery img {
+    width: calc(30% + 10px);
+    height: 40vh;
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.liz-content .back-button{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #004494;
+    border-radius: 10px;
+}
+
+.back-button button{
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10x 20px;
+    font-size: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.back-button button:hover{
+    background-color: #fff;
+    color: #004494;
+    
+}
+
+/* For small screens (max-width: 600px) */
+@media screen and (max-width: 800px) {
+    .container .liz-content {
+        width: 95%; /* Increase width slightly for better spacing */
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+
+    .liz-content {
+        margin: 10px auto;
+        padding: 15px;
+        box-shadow: none; /* Optional: Remove box-shadow on smaller screens */
+    }
+
+    .liz-content header h1 {
+        font-size: 1.8em; /* Reduce font size */
+    }
+
+    .liz-content header p {
+        font-size: 1em; /* Adjust the size of the paragraph text */
+    }
+
+    .liz-content .bio h2, .gallery h2 {
+        font-size: 1.5em; /* Reduce font size */
+        padding-bottom: 3px;
+    }
+
+    .liz-content .bio p {
+        font-size: 1em; /* Adjust font size for better readability */
+    }
+
+    .liz-content .gallery {
+        flex-direction: column; /* Stack gallery items vertically */
+        margin-top: 20px; /* Reduce top margin */
+        border-radius: 5px; /* Slightly reduce border radius */
+    }
+
+    .images {
+        flex-direction: column; /* Stack images vertically */
+        justify-content: flex-start; /* Align items to the top */
+    }
+
+    .gallery img {
+        width: 90%; /* Make images larger to fill screen width */
+        height: auto; /* Maintain aspect ratio */
+        margin: 10px 0; /* Add vertical margin */
+        border-radius: 5px; /* Reduce border radius */
+    }
+}
+
 /*---------------------------------------------------------------------------------------------------------------------------*/
 
 .love-div {
