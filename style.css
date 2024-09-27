@@ -1,0 +1,1031 @@
+*/{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #f0f0f0; }
+}
+
+@keyframes fadeInForward {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes PulsePing {
+	0% {
+		opacity: 0.8;
+		transform: scale(0.2);
+	}
+
+	80% {
+		opacity: 0;
+		transform: scale(1.2);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(2.2);
+	}
+}
+
+@keyframes Intros {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fancier {
+	0% {
+		opacity: 0;
+		transform: rotateX(70deg);
+		transform-origin: top;
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotateX(0deg);
+		transform-origin: top;
+	}
+}
+
+@keyframes entry {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes swing {
+	0% {
+		opacity: 0;
+		transform: rotateY(-70deg);
+		transform-origin: left;
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotateY(0);
+		transform-origin: left;
+	}
+}
+
+@keyframes bounce {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+body{
+    background-color: rgba(0, 87, 179, 0.469);
+    color:#f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('img3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+.container .intro-div {
+    background-color:transparent;
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    color: #f0f0f0;
+    animation: fadeInForward 2s ease 0s 1 normal forwards;
+}
+
+
+.intro-div .img-div{
+    width: 40%;
+    height: 50vh;
+    border-radius: 10px;
+    animation: fadeInForward 3s ease 0s 1 normal forwards;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.intro-div .img-div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+   
+}
+.intro-div .name-div {
+    width: 40%;
+    height: 50px;
+    border: 1px solid #f0f0f0;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    animation: slideInLeft 2s ease 0s 1 normal forwards;
+}
+
+.name-div #sname{
+    color: #004494;
+    margin-left: 10px;
+    border-right: 2px solid;
+    animation: blink-caret 0.9s step-end infinite;
+}
+
+
+.intro-div .greeting-div{
+    width: 40%;
+    height: 50px;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideInLeft 2s ease 0s 1 normal forwards;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+
+.intro-div .proceed-buttons {
+    width: 40%;
+    height: 50px;
+    border: 1px solid #f0f0f0;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    animation: swing 2s ease 0s 1 normal forwards;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.proceed-buttons button{
+    background-color: #f0f0f0;
+    color:#0056b3;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.proceed-buttons button:hover{
+    color: #f0f0f0;
+    background-color: transparent;
+    border: 1px solid #f0f0f0;
+}
+.proceed-buttons button:active{
+    background-color: gold;
+    color: #0056b3;
+}
+
+.proceed-buttons button:disabled{
+    background-color: #ee0a5e;
+    opacity: 0.8;
+    color: #f0f0f0;
+    border: #f0f0f0 solid 1px;
+    cursor: not-allowed;
+}
+
+/* For small screens (max-width: 600px) */
+@media screen and (max-width: 800px) {
+    .container .intro-div {
+        width: 90%;
+        padding: 5px;
+        border-radius: 5px;
+        
+    }
+
+    .intro-div .img-div {
+        width: 80%;
+        height: 40vh;
+        border-radius: 5px;
+    }
+
+    .intro-div .name-div,
+    .intro-div .greeting-div,
+    .intro-div .proceed-buttons {
+        width: 80%;
+        height: 40px;
+        border-radius: 5px;
+        margin-top: 8px;
+    }
+
+    .proceed-buttons button {
+        font-size: 16px;
+        padding: 3px 6px;
+    }
+
+    .name-div #sname {
+        margin-left: 5px;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+
+/* Base styles */
+.container .lily-content {
+    background-color: transparent;
+    width: 99%;
+    min-height: 100vh;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none; /* Changed from none to flex for visibility */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    animation: fadeInForward 3s ease 0s 1 normal forwards;
+}
+
+.lily-content .header {
+    width: 100%;
+    background-color: #f0f0f0;
+    color: #0056b3;
+    min-height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; /* Added padding for better spacing */
+}
+
+.lily-content .header h2 {
+    margin: 0; /* Reset margin */
+}
+
+.lily-content .header .image-logo {
+    width: 50px; /* Adjusted width */
+    height: 50px; /* Adjusted height */
+    border-radius: 50%;
+    overflow: hidden; /* Ensure the image fits within the circle */
+    margin-left: 20px;
+}
+
+.image-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+.lily-content .header .button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.lily-content .header button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    gap: 5px; /* Space between icon and text */
+    margin-left: 5px;
+}
+
+.lily-content .header button:hover {
+    background-color: #004494; /* Darker shade on hover */
+}
+
+/* Base styles */
+.lily-content .lily-about {
+    text-align: center;
+    margin-top: 20px;
+    height: 80vh;
+    width: 60%;
+    background-color: transparent;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: flex-start; /* Align content at the top as well */
+    flex-direction: column;
+    overflow-y: auto;
+    position: relative;
+    scrollbar-width: none;
+  
+}
+
+/* Hide scrollbar for WebKit browsers */
+.lily-content .lily-about::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+
+.lily-about .tik-tok-div {
+    background-color: #f0f0f0;
+    color: #004494;
+    width: 100%; /* Adjusted width for better responsiveness */
+    min-height: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for better visual separation */
+    /* Background Image Styling */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    background-clip: border-box;
+    position: relative;
+}
+
+
+
+
+.tik-tok-div .lyrics-container {
+    flex: 1;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* CSS for the time track */
+.tiktok-time-track {
+    position: absolute;
+    bottom: 70px;
+    left: 10px;
+    width: 90%;
+    height: 5px;
+    background-color: #282828;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+
+/* CSS for the time bar */
+.tiktok-time-bar {
+    width: 0;
+    height: 100%;
+    background-color: #ee0a5e;
+    border-radius: 5px;
+}
+
+
+/* Styling for lyrics-container span */
+.lyrics-container span {
+    font-size: 1.2rem;
+    color: gold; /* Dark blue for text */
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.275); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better readability */
+    max-width: 90%;
+    margin: 10px 5px;
+    display: inline-block;
+    bottom: 30px;
+    transition: transform 0.3s ease-in-out; /* Animation for hover effect */
+}
+
+
+
+/* Hover effect for span */
+.lyrics-container span:hover {
+    transform: scale(1.05); /* Slight scaling effect on hover */
+    background-color: rgba(255, 255, 255, 1); /* Slight change to background on hover */
+    color: #0056b3;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.lyrics-container .song-lyrics{
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    animation: fancier 2s ease 0s 1 normal forwards;
+}
+
+.lyrics-container .song-lyrics span {
+    
+}
+
+.tik-tok-div .action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    background-color: transparent;
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    
+}
+
+.tik-tok-div .action-buttons span {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.tik-tok-div .action-buttons span:hover {
+    background-color: #004494;
+    
+}
+
+/* Styles for small screens (phones, small tablets) */
+@media (max-width: 800px) {
+    /* Adjust container for small screens */
+    .container .lily-content {
+        width: 98%;
+        margin-top: 5px;
+        padding: 10px;
+    }
+
+    /* Header adjustments */
+    .lily-content .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 10px;
+    }
+
+    .lily-content .header h2 {
+        font-size: 1.5rem;
+    }
+
+    .lily-content .header .image-logo {
+        width: 40px;
+        height: 40px;
+        margin-left: 0;
+    }
+
+    .lily-content .header .button-container{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+    .lily-content .header button {
+        font-size: 14px;
+        padding: 8px 15px;
+        margin-left: 10px;
+    }
+
+    /* Adjust lily-about section for smaller screens */
+    .lily-content .lily-about {
+        width: 95%;
+        height: 80vh; /* Reduce height to fit smaller screens */
+        margin-top: 5px;
+        padding: 5px;
+    }
+
+    /* Tik-tok div adjustments */
+    .lily-about .tik-tok-div {
+        width: 100%; /* Full width for small screens */
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+
+    .tik-tok-div .lyrics-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        justify-content: flex-end;
+    }
+
+    /* Adjust font size and padding of the span inside lyrics-container */
+    .lyrics-container span {
+        font-size: 1rem;
+        padding: 10px;
+        margin: 5px 0;
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    /* Adjust action buttons */
+    .tik-tok-div .action-buttons {
+        flex-direction: row;
+        width: 100%;
+        padding: 5px;
+        justify-content: space-around;
+    }
+
+    .tik-tok-div .action-buttons span {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+
+.container .liz-content{
+    background-color: transparent;
+    width: 99%;
+    min-height: 100vh;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    animation: fadeInForward 3s ease 0s 1 normal forwards;
+}
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+.love-div {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute; /* So that it can be placed anywhere */
+    z-index: 1;
+    animation: PulsePing 5s ease 0s 1 normal forwards;
+    color: #ee0a5e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: transparent;
+}
+
+.love-div i {
+    font-size: 100px;
+    border-radius: 50%;
+}
+/***************************************************************************************************************************/
+
+.ask-more-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it stays on top */
+    
+}
+
+.close-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.content-overlay {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    width: 90%;
+    border: 1px solid #f0f0f0;
+    color: #f0f0f0;
+    animation: Intros 2s ease 0s 1 normal forwards;
+}
+
+.content-overlay h2 {
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+.content-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+}
+
+.content-buttons button {
+    background-color: #f0f0f0;
+    color: #0056b3;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.content-buttons button:hover {
+    background-color: transparent;
+    border: 1px solid #f0f0f0;
+}
+
+.content-buttons span {
+    color: #f0f0f0;
+    font-size: 1.2em;
+}
+
+/* For small screens (max-width: 600px) */
+@media screen and (max-width: 800px) {
+    .ask-more-overlay {
+        padding: 4px; /* Add padding for better spacing on small screens */
+    }
+
+    .close-overlay {
+        font-size: 1.5em; /* Reduce size of close button */
+        top: 10px; /* Adjust top and right spacing */
+        right: 10px;
+    }
+
+    .content-overlay {
+        max-width: 90%; /* Reduce the max width */
+        padding: 10px; /* Reduce padding */
+        border-radius: 5px; /* Soften corners for small screens */
+    }
+
+    .content-overlay h2 {
+        font-size: 1.5em; /* Adjust font size */
+        margin-bottom: 15px; /* Adjust spacing */
+    }
+
+    .content-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        margin-top: 15px;
+    }
+
+    .content-buttons button {
+        padding: 8px 16px; /* Reduce padding */
+        margin: 10px 0; /* Add vertical spacing between buttons */
+        font-size: 16px; /* Adjust button text size */
+    }
+
+    .content-buttons span {
+        font-size: 1em; /* Adjust the size of span text */
+    }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+.fancier-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    z-index: 1; /* Ensure it appears above other content */
+    animation: fancier 2s ease 0s 1 normal forwards;
+}
+
+.close-fancier {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    z-index: 3;
+}
+
+
+.fancier-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background-color: transparent;
+    width: 90%;
+    height: 90vh;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.list-videos{
+    width: 40%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.this-side {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    width: 100%;
+    min-height: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.video-field {
+    position: relative;
+    width: 100%; /* Adjust the width as needed */
+    height: 100%; /* Adjust the height as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px 10px;
+   
+    
+}
+
+
+
+.video-field video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.played {
+    border: 5px solid #4CAF50; /* Green border to indicate the video has been played */
+    /* Slightly reduce opacity */
+    transition: all 0.3s ease; /* Smooth transition for the styles */
+
+}
+
+.audio-control {
+    position: absolute; /* or 'absolute' if you want it to scroll with the page */
+    top: 20px; /* Adjust this value to control how far from the top */
+    left: 20px; /* Adjust this value to control how far from the left */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 50px; /* Icon size */
+    color: #f0f0f0; /* Icon color */
+    
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    
+    background-color: transparent;
+    border: 2px solid #f0f0f0; /* Optional border around the control */
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.audio-control:hover{
+    color: #0056b3;
+    background-color: #f0f0f0;
+}
+
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.video-overlay button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #004494;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.video-overlay button:hover {
+    background-color: #d0094e;
+}
+
+
+@media (max-width: 800px) {
+    .fancier-overlay {
+        justify-content: flex-start; /* Align content from the top */
+        align-items: flex-start; /* Align from top instead of center */
+    }
+
+    .close-fancier {
+        font-size: 40px; /* Reduce the close button size */
+        top: 30px; /* Adjust spacing */
+        right: 10px;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .fancier-content {
+        flex-direction: column; /* Stack the content vertically */
+        width: 98%;
+        height: 90vh; /* Allow content to stretch based on the video height */
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .list-videos{
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+    .this-side {
+        flex-direction: column; /* Stack videos vertically */
+        width: 100%; /* Take full width of the screen */
+        margin-top: 10px;
+        padding: 0;
+        height: 100%; /* Allow this section to grow based on content */
+        overflow:hidden;
+        background-color: transparent;
+    }
+
+    .video-field {
+        width: 100%; /* Full width for each video */
+        aspect-ratio: 9 / 16; /* Maintain 9:16 aspect ratio */
+        margin: 5px 0; /* Reduce margins between videos */
+        border-radius: 8px; /* Slightly smaller border-radius */
+        overflow: hidden; /* Ensure content fits within the aspect ratio */
+        height: 100%;
+    }
+
+    .video-field video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure the video fills the container */
+    }
+
+    .audio-control {
+        top: 30px; /* Closer to the top */
+        left: 10px; /* Closer to the left */
+        
+        font-size: 30px; /* Slightly smaller icon */
+        background-color: #282828;
+        width: 40px; /* Smaller size */
+        height: 40px;
+        padding: 8px;
+        margin-bottom: 30px;
+        z-index: 2;
+    }
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+.love-emoji {
+    font-size: 4rem;
+    color: #ee0a5e;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    animation: bounce 2s ease 0s 1 normal forwards;
+}
